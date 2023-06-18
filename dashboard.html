@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style8.css">
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        #stock-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .stock-card {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 300px;
+            margin: 10px;
+            padding: 10px;
+        }
+
+        .stock-card h2 {
+            margin-top: 0;
+        }
+
+        .stock-card p {
+            margin-bottom: 5px;
+        }
+    </style>
+    <script>
+       
+        function updateStockPrices() {
+            
+            var stocks = [
+                { symbol: "AAPL", volume: 100000 },
+                { symbol: "GOOGL", volume: 50000 },
+                { symbol: "MSFT", volume: 75000 },
+                { symbol: "AMZN", volume: 30000 },
+                { symbol: "FB", volume: 40000 },
+                { symbol: "NFLX", volume: 20000 },
+                { symbol: "TSLA", volume: 60000 },
+                { symbol: "IBM", volume: 45000 },
+                { symbol: "NVDA", volume: 35000 },
+                { symbol: "JPM", volume: 25000 },
+                { symbol: "BAC", volume: 20000 },
+                { symbol: "WMT", volume: 30000 },
+                { symbol: "GE", volume: 40000 },
+                { symbol: "XOM", volume: 50000 },
+                { symbol: "CVS", volume: 15000 },
+                { symbol: "DIS", volume: 10000 },
+                { symbol: "MCD", volume: 18000 },
+                { symbol: "VZ", volume: 22000 },
+                { symbol: "PEP", volume: 16000 },
+                { symbol: "CSCO", volume: 12000 },
+                { symbol: "INTC", volume: 32000 },
+                { symbol: "AMD", volume: 42000 },
+                { symbol: "ADBE", volume: 23000 },
+                { symbol: "PYPL", volume: 19000 },
+                { symbol: "NVDA", volume: 35000 },
+                { symbol: "CRM", volume: 27000 },
+                { symbol: "ABT", volume: 28000 },
+                { symbol: "ABBV", volume: 21000 },
+                { symbol: "BMY", volume: 23000 },
+                { symbol: "GILD", volume: 16000 },
+                { symbol: "AMGN", volume: 18000 }
+            ];
+
+            stocks.forEach(function(stock) {
+                
+                var price = Math.random() * 1000;
+
+                
+                var stockElement = document.getElementById(stock.symbol);
+                stockElement.innerHTML = "$" + price.toFixed(2);
+
+                
+                var volumeElement = document.getElementById(stock.symbol + "_volume");
+                volumeElement.innerHTML = stock.volume.toLocaleString();
+            });
+
+            
+            setTimeout(updateStockPrices, 5000);
+        }
+
+        
+        window.onload = updateStockPrices;
+    </script>
+</head>
+<body background="bg4.jpg"> <br> >
+    <header>
+        <h1>Loss Prevention System</h1>
+        <div>
+            <button class="btn btn-primary"><a href="index.html">Home</a></button>
+            <button class="btn btn-primary"><a href="buystock.php">Buy Stock</a></button>
+            <button class="btn btn-primary"><a href="sell_stock.php">Sell Stock</a></button>
+            <button class="btn btn-primary"><a href="live.html">Live Stock</a></button>
+            <button class="btn btn-primary"><a href="stockdetail.php">Stock Detail</a></button>
+            <button class="btn btn-primary"><a href="changepass.php">Change Password</a></button>
+            <button class="btn btn-primary"><a href="logoutuser.html">Log Out</a></button>
+        </div>
+    </header>
+
+    <div id="stock-list">
+        <div class="stock-card">
+            <h2>AAPL</h2>
+            <p>Price: <span id="AAPL"></span></p>
+            <p>Volume: <span id="AAPL_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>GOOGL</h2>
+            <p>Price: <span id="GOOGL"></span></p>
+            <p>Volume: <span id="GOOGL_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>MSFT</h2>
+            <p>Price: <span id="MSFT"></span></p>
+            <p>Volume: <span id="MSFT_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>AMZN</h2>
+            <p>Price: <span id="AMZN"></span></p>
+            <p>Volume: <span id="AMZN_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>FB</h2>
+            <p>Price: <span id="FB"></span></p>
+            <p>Volume: <span id="FB_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>NFLX</h2>
+            <p>Price: <span id="NFLX"></span></p>
+            <p>Volume: <span id="NFLX_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>TSLA</h2>
+            <p>Price: <span id="TSLA"></span></p>
+            <p>Volume: <span id="TSLA_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>IBM</h2>
+            <p>Price: <span id="IBM"></span></p>
+            <p>Volume: <span id="IBM_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>NVDA</h2>
+            <p>Price: <span id="NVDA"></span></p>
+            <p>Volume: <span id="NVDA_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>JPM</h2>
+            <p>Price: <span id="JPM"></span></p>
+            <p>Volume: <span id="JPM_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>BAC</h2>
+            <p>Price: <span id="BAC"></span></p>
+            <p>Volume: <span id="BAC_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>WMT</h2>
+            <p>Price: <span id="WMT"></span></p>
+            <p>Volume: <span id="WMT_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>GE</h2>
+            <p>Price: <span id="GE"></span></p>
+            <p>Volume: <span id="GE_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>XOM</h2>
+            <p>Price: <span id="XOM"></span></p>
+            <p>Volume: <span id="XOM_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>CVS</h2>
+            <p>Price: <span id="CVS"></span></p>
+            <p>Volume: <span id="CVS_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>DIS</h2>
+            <p>Price: <span id="DIS"></span></p>
+            <p>Volume: <span id="DIS_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>MCD</h2>
+            <p>Price: <span id="MCD"></span></p>
+            <p>Volume: <span id="MCD_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>VZ</h2>
+            <p>Price: <span id="VZ"></span></p>
+            <p>Volume: <span id="VZ_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>PEP</h2>
+            <p>Price: <span id="PEP"></span></p>
+            <p>Volume: <span id="PEP_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+            <h2>CSCO</h2>
+            <p>Price: <span id="CSCO"></span></p>
+            <p>Volume: <span id="CSCO_volume"></span></p>
+        </div>
+
+        <div class="stock-card">
+          <h2>INTC</h2>
+          <p>Price: <span id="INTC"></span></p>
+          <p>Volume: <span id="INTC_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>AMD</h2>
+          <p>Price: <span id="AMD"></span></p>
+          <p>Volume: <span id="AMD_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>ADBE</h2>
+          <p>Price: <span id="ADBE"></span></p>
+          <p>Volume: <span id="ADBE_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>PYPL</h2>
+          <p>Price: <span id="PYPL"></span></p>
+          <p>Volume: <span id="PYPL_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>NVDA</h2>
+          <p>Price: <span id="NVDA"></span></p>
+          <p>Volume: <span id="NVDA_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>CRM</h2>
+          <p>Price: <span id="CRM"></span></p>
+          <p>Volume: <span id="CRM_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>ABT</h2>
+          <p>Price: <span id="ABT"></span></p>
+          <p>Volume: <span id="ABT_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>ABBV</h2>
+          <p>Price: <span id="ABBV"></span></p>
+          <p>Volume: <span id="ABBV_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>BMY</h2>
+          <p>Price: <span id="BMY"></span></p>
+          <p>Volume: <span id="BMY_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>GILD</h2>
+          <p>Price: <span id="GILD"></span></p>
+          <p>Volume: <span id="GILD_volume"></span></p>
+      </div>
+
+      <div class="stock-card">
+          <h2>AMGN</h2>
+          <p>Price: <span id="AMGN"></span></p>
+          <p>Volume: <span id="AMGN_volume"></span></p>
+      </div>
+
+      
+    </div>
+</body>
+</html>

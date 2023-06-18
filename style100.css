@@ -1,0 +1,50 @@
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+  }
+  div{
+    background-color: #333;
+    color: #fff;
+    text-align: right;
+  }
+
+  .bg-img {
+    background-image: url("bg1.jpg");
+  
+    min-height: 500px;
+  
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0;
+  }
+
+  
+  button{
+    background-color:lightblue;
+    color: red;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px;
+    margin-bottom: 5px;
+    
+  }
+  .button-container {
+    text-align: center;
+  }
+  
+  .centered-button {
+    display: inline-block;
+    margin: 0 10px;
+  }
+  
